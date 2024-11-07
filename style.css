@@ -16,6 +16,7 @@ body{
 	.header{
 		position: fixed;
 		width: 100%;
+		height: 15%;
 		top: 0;
 		left: 0;
 		padding: 20px 120px;
@@ -25,11 +26,11 @@ body{
 		z-index:100;
 	}
 	
-	a.logo{
-		font-weight:700;
-		font-size: 32px;
-		color:white;
-		text-decoration: none;
+	.logo{
+		float: left;
+		padding-top: 3px;
+		width: 80px;
+		height: 80px;
 	}
 	
 	.navbar li{
@@ -116,13 +117,13 @@ body{
 
 	@keyframes title{
 		to{
-			transform: translateY(500px);
+			transform: translateY(600px);
 		}
 	}
 
 	.overview{
 		position: relative;
-		padding: 6% 5%;
+		padding: 6% 8%;
 		background: #48564D;
 		min-height: auto;
 	}
@@ -133,7 +134,7 @@ body{
 	}
 
 	.overview p{
-		margin-top: 15px;
+		margin-top: 20px;
 		text-align: justify;
 		font-size: 20px;
 		/* font-family: sans-serif; */
@@ -142,14 +143,6 @@ body{
 	#divider-2{
 		height: auto;
 		top: 83%;
-	}
-
-	.article-holder{
-		padding: 15% 10%;
-		background: url(busyroad.png);
-		background-position: center;
-		background-size:contain;
-		background-repeat: no-repeat;
 	}
 
 	.button{
@@ -166,6 +159,15 @@ body{
 	.button:hover{
 		background:#c6ebd3;
 		color:#48564D;
+		box-shadow: 4px 7px 4px rgb(21, 29, 25);
+	}
+
+	.article-holder{
+		padding: 15% 10%;
+		background: url(busyroad.png);
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
 	}
 
 	.articles{
@@ -176,8 +178,10 @@ body{
 	}
 
 	.article{
+		width: 300px;
+		height: 400px;
 		padding:2% 2.5%;
-		background:#b4cabc;
+		background: linear-gradient(transparent, #57695d,#48564D);
 		border:2px solid #48564D;
 		text-align: center;
 		border-radius: 25px;
@@ -193,4 +197,17 @@ body{
 		text-align: justify;
 		margin-top: 3%;;
 		margin-bottom: 8%;
+	}
+
+	@keyframes enlarge{
+		from{
+			transform: scale(1,1);
+		}
+		to{
+			transform: scale(2);
+		}
+	}
+
+	.article:hover{
+	animation: enlarge linear;
 	}
